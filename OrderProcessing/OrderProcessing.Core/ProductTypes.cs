@@ -24,4 +24,13 @@ namespace OrderProcessing.Core
         LearningToSki = 1,
         Others = 2
     }
+
+    /// <summary>
+    /// Packing slip type
+    /// </summary>
+    public enum PackingSlipType
+    {
+        Shipping = 1,
+        Royalty = 2
+    }
 }
