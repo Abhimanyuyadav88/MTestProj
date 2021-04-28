@@ -22,11 +22,16 @@ namespace OrderProcessing.Implementation
             if (membershipType == MembershipType.Basic)
             {
                 Console.WriteLine(Constants.BasicMembershipActivated);
+
+                //Select template based on membership type and get emailId from request
+                notificationService.SendNotification(Constants.DummyEmailForProcessing);
             }
 
             if (membershipType == MembershipType.Premium)
             {
                 Console.WriteLine(Constants.PremiumMembershipActivated);
+                //Select template based on membership type and get emailId from request
+                notificationService.SendNotification(Constants.DummyEmailForProcessing);
             }
         }
 
@@ -34,8 +39,6 @@ namespace OrderProcessing.Implementation
         {
             Console.WriteLine(Constants.ProcessingMemberShipOrder);
             ActivateMemberShip(membershipType);
-            //Capture emailId from request and validate it
-            notificationService.SendNotification(Constants.DummyEmailForProcessing);
         }
     }
 }

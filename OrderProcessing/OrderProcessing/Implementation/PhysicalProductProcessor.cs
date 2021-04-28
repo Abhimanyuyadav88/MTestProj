@@ -8,11 +8,11 @@ using System.Text;
 
 namespace OrderProcessing.Implementation
 {
-    public class PhysicalProduct : IPhysicalProduct
+    public class PhysicalProductProcessor : IPhysicalProduct
     {
         private IPackingSlipGenerator packingSlipGenerator;
 
-        public PhysicalProduct(IPackingSlipGenerator slipGenerator)
+        public PhysicalProductProcessor(IPackingSlipGenerator slipGenerator)
         {
             packingSlipGenerator = slipGenerator;
         }

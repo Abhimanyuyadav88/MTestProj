@@ -36,7 +36,7 @@ namespace OrderProcessing
             {
                 Console.WriteLine("----------------------{0}----------------------------", "Process PhysicalOrder");
                 //// Process PhysicalOrder
-                postOrderProcessing = new PhysicalProduct(packingSlipGenerator);
+                postOrderProcessing = new PhysicalProductProcessor(packingSlipGenerator);
                 postOrderProcessing.PostOrderProcessing();
                 Console.WriteLine();
 
@@ -71,7 +71,7 @@ namespace OrderProcessing
             }
             else if (choice == 1)
             {
-                postOrderProcessing = new PhysicalProduct(packingSlipGenerator);
+                postOrderProcessing = new PhysicalProductProcessor(packingSlipGenerator);
                 postOrderProcessing.PostOrderProcessing();
             }
             Console.ReadLine();
