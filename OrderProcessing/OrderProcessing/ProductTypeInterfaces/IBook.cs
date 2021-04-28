@@ -12,8 +12,7 @@ namespace OrderProcessing.ProductTypeInterfaces
     {
         /// <summary>
         /// If the payment is for a book, create a duplicate packing slip for the royalty department
-        /// </summary>
-        /// <param name="OrderId">The order identifier.</param>
-        void CreateDuplicatePackingSlip(string OrderId);
+        /// </summary>  
+        void CreateDuplicatePackingSlip();
     }
 }

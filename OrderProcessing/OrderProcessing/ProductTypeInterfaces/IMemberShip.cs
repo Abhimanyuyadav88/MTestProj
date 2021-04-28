@@ -1,4 +1,5 @@
-﻿using OrderProcessing.Interfaces;
+﻿using OrderProcessing.Core;
+using OrderProcessing.Interfaces;
 using OrderProcessing.Models;
 using System;
 using System.Collections.Generic;
@@ -9,12 +10,12 @@ namespace OrderProcessing.ProductTypeInterfaces
     /// Membership request model
     /// </summary>
     /// <seealso cref="OrderProcessing.Interfaces.IPostOrderProcessing" />
-    public interface IMemberShip : IPostOrderProcessing
+    public interface IMembership : IPostOrderProcessing
     {
         /// <summary>
         /// Activates the member ship.
         /// </summary>
-        /// <param name="request">The request.</param>
-        void ActivateMemberShip(MembershipRequestModel request);
+        /// <param name="membershipType">Type of the membership.</param>
+        void ActivateMemberShip(MembershipType membershipType);
     }
 }

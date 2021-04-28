@@ -33,4 +33,13 @@ namespace OrderProcessing.Core
         Shipping = 1,
         Royalty = 2
     }
+
+    /// <summary>
+    /// Membership type
+    /// </summary>
+    public enum MembershipType
+    {
+        Basic = 1,
+        Premium = 2
+    }
 }

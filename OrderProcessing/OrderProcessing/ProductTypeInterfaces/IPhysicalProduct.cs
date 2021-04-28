@@ -1,4 +1,5 @@
-﻿using OrderProcessing.Interfaces;
+﻿using OrderProcessing.Core;
+using OrderProcessing.Interfaces;
 using OrderProcessing.Models;
 using System;
 using System.Collections.Generic;
@@ -13,9 +14,14 @@ namespace OrderProcessing.ProductTypeInterfaces
     public interface IPhysicalProduct : IPostOrderProcessing
     {
         /// <summary>
-        /// If the payment is for a physical product, generate a packing slip for shipping.
+        /// Generates the packing slip for shipping.
         /// </summary>
-        /// <param name="request">The request.</param>
-        void GeneratePackingSlipForShipping(PhysicalProductRequestModel request);
+        void GeneratePackingSlipForShipping();
+
+        /// <summary>
+        /// Pays the commision payment.
+        /// </summary>
+        /// <param name="commisionPercentage">The commision percentage.</param>
+        void PayAgentCommisionPayment(int commisionPercentage);
     }
 }
