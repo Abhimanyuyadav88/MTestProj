@@ -73,5 +73,10 @@ namespace OrderProcessing.Core
         /// The video other than learning to ski
         /// </summary>
         public const string VideoOtherThanLearningToSki = "Video other than Learning to ski processed";
+
+        /// <summary>
+        /// The options
+        /// </summary>
+        public const string ProductOptions = "Press 1 to process PhysicalPayment.\nPress 2 to process Book payment. \nPress 3 to process basic MemeberShipPayment.Press 4 to process Premium Membership payment.\nPress 5 to process LearningToSkiVideo. \nPress 6 to process OtherVideo.,\nPress -1 to Quit.\n";
     }
 }

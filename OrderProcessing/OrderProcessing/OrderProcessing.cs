@@ -12,6 +12,13 @@ namespace OrderProcessing
     {
         static void Main(string[] args)
         {
+            OrderProcessingHandler orderProcessingHandler = InitializedProject();
+            orderProcessingHandler.InitializeOrderProcessing();
+
+        }
+
+        static OrderProcessingHandler InitializedProject()
+        {
             ServiceCollection serviceCollection = new ServiceCollection();
 
             //// Adding dependency
@@ -20,9 +27,7 @@ namespace OrderProcessing
 
             ServiceProvider serviceProvider = serviceCollection.BuildServiceProvider();
 
-            OrderProcessingHandler orderProcessingHandler = ActivatorUtilities.CreateInstance<OrderProcessingHandler>(serviceProvider);
-            orderProcessingHandler.InitializeOrderProcessing();
-
+            return ActivatorUtilities.CreateInstance<OrderProcessingHandler>(serviceProvider);
         }
     }
 }
