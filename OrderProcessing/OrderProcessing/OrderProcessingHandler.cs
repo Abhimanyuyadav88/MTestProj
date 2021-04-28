@@ -9,20 +9,40 @@ using System.Text;
 
 namespace OrderProcessing
 {
+    /// <summary>
+    /// Order Processing handler
+    /// </summary>
     public class OrderProcessingHandler
     {
+        /// <summary>
+        /// The packing slip generator
+        /// </summary>
         private readonly IPackingSlipGenerator packingSlipGenerator;
+
+        /// <summary>
+        /// The notification service
+        /// </summary>
         private readonly INotificationService notificationService;
 
+        /// <summary>
+        /// The post order processing
+        /// </summary>
         private IPostOrderProcessing postOrderProcessing;
 
-
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderProcessingHandler"/> class.
+        /// </summary>
+        /// <param name="slipGenerator">The slip generator.</param>
+        /// <param name="notification">The notification.</param>
         public OrderProcessingHandler(IPackingSlipGenerator slipGenerator, INotificationService notification)
         {
             packingSlipGenerator = slipGenerator;
             notificationService = notification;
         }
 
+        /// <summary>
+        /// Initializes the order processing.
+        /// </summary>
         public void InitializeOrderProcessing()
         {
             //Console.WriteLine("Press 1 to process PhysicalPayment.\nPress 2 to process Book payment. \nPress 3 to process basic MemeberShipPayment.", ConsoleColor.Blue);
@@ -78,6 +98,9 @@ namespace OrderProcessing
 
         }
 
+        /// <summary>
+        /// Runs all payment orders. Demo purpose
+        /// </summary>
         public void RunAllPaymentOrders()
         {
 
